@@ -22,9 +22,10 @@ resource "jira_project" "test" {
 }
 
 resource "jira_issue_type" "task" {
+  key         = "EX2"
   name        = "Task"
   description = "A task that needs to be done."
-  project_id  = jira_project.example.id
+  # project_id  = jira_project.example.id
 }
 
 resource "jira_automation_rule" "issue_created" {
